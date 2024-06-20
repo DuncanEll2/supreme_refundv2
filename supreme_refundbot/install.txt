@@ -1,0 +1,33 @@
+1 Create a discord bot in discord devleloper
+2 Fill in all fields in the .env file
+3 Install the SQL file to your fivem database
+4 Install modules ( npm install, pnpm install or yarn install )
+5 Invite the bot to your discord
+6 Start the bot by running node . in the src folder
+
+MAKE SURE TO ENABLE ( Privileged Gateway Intents ) ON THE BOT IN DISCORD DEVLEOPER
+
+
+Usage
+
+/refund [itemname] [amount] [code] -- Create the refund and stores it into the database
+/retrieve -- This returns a list of unused codes within the database
+
+
+--
+
+FiveM Script
+
+Install the script to your fivem server and fix the config to your accord and framework
+Code generated in discord you can use in the server -- [/refund [generatedcode] ]
+Once code has been used the database will then remov the code
+
+-- Support will be giving in the new discord server we have made
+
+https://discord.gg/kJ94NcUh7B
+
+CREATE TABLE IF NOT EXISTS `refunds` (
+  `itemname` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `amount` int DEFAULT NULL,
+  `randomcode` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
