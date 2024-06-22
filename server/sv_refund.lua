@@ -80,7 +80,6 @@ elseif Config.Framework == 'ESX' then
                             amount = tonumber(amount) or 0
 
                             if amount > 0 then
-                                print("Adding item:", itemName, "Amount:", amount) -- Debugging
                                 Player.addInventoryItem(itemName, amount)
                             else
                                 TriggerClientEvent(Config.NotificationESX, source, Config.InvalidAmountFound)
